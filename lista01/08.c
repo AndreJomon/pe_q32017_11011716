@@ -2,19 +2,22 @@
 
 int main(){
     /*Fibonnaci do Xº termo*/
-    int x, fibb, antefibb = 1, anteantefibb = 0;
-    scanf("%d", &x);
-    printf("0, 1, ");
-    for (int i = 0; i<x-2; i++){
-        fibb = anteantefibb+antefibb;
-        anteantefibb = antefibb;
-        antefibb = fibb;
-        printf("%d, ", fibb);
+int x, fib1, fib2, fib3;
+printf("Até qual termo do Fibonacci?\n");
+scanf("%d", &x);
+if (x==0){
+    printf("0");
+} else if (x==1){
+        printf("0, 1");
+} else{
+    printf("0, 1");
+    fib1 = 0;
+    fib2 = 1;
+    for(int i=1; x>i; i++){
+            fib3 = fib1+fib2;
+            fib1 = fib2;
+            fib2 = fib3;
+            printf(", %d", fib3);
     }
-    /*Repetindo o código acima para a formatação sair certa no final*/
-    fibb = anteantefibb+antefibb;
-    anteantefibb = antefibb;
-    antefibb = fibb;
-    printf("%d", fibb);
-    return 0;
+}
 }
