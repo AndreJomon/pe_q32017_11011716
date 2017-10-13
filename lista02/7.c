@@ -52,7 +52,7 @@ float binariodecimal(int bin, int d, int pot)
 	if (bin != 0) {
 		d = d + (bin%10*pot);
 		pot *= 2.0;
-		d /= 10.0;
+		bin /= 10.0;
 		return binariodecimal(bin, d, pot);
 	}
 	return d;
