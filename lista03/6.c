@@ -27,7 +27,7 @@ int main ()
 		scanf("%d", (v+i));
 	}
 	qsort(v, size, sizeof(int), cmpfunc);
-	printf("%.2lf", mediana(v, size));
+	printf("%.2lf\n", mediana(v, size));
 
 	free(v);
 	return 0;
